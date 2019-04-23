@@ -1,6 +1,5 @@
 // =============================================
-// TEMPLATE FOR SIMPLIFIED BOOTSTRAP GRID SYSTEM
-// (ADAPTED FROM NW BOOTCAMP CLASS ACTIVITIES)
+//     RENDER 404 PAGE IF NO PATH IS HIT
 // =============================================
 
 import React, { Component } from 'react';

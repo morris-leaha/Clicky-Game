@@ -11,5 +11,5 @@ if (process.env.NODE_ENV === "production") {
 
 // ============= LISTENER INFO ==============
 app.listen(PORT, function() {
-    console.log(`🌎 ==> API Server now listening on PORT ${PORT}!`);
+    console.log(`🌎 ==> App is now listening on PORT ${PORT}!`);
   });
