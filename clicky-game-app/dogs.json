@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "image": "./public/assets/images/baptist-standaert-346832-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 2,
+      "image": "./public/assets/images/charles-550068-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 3,
+      "image": "./public/assets/images/christopher-ayme-157131-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 4,
+      "image": "./public/assets/images/jamie-street-804226-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 5,
+      "image": "./public/assets/images/lorca-wiles-667116-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 6,
+      "image": "./public/assets/images/marko-blazevic-447504-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 7,
+      "image": "./public/assets/images/nathalie-ehrnleitner-1524022-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 8,
+      "image": "./public/assets/images/ryan-walton-367436-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 9,
+      "image": "./public/assets/images/sven-kucinic-1392505-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 10,
+      "image": "./public/assets/images/valentin-hermann-1276357-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 11,
+      "image": "./public/assets/images/vitor-fontes-563168-unsplash.jpg",
+      "clicked": false
+    }
+  ]
