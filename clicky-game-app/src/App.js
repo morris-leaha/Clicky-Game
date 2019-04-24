@@ -11,11 +11,12 @@ class App extends Component {
     return (
       <Router>
         <Navbar />
+        <Jumbotron />
         <Switch>
             <Route exact path="/" component={Dogs} />
             <Route component={PageNotFound} />
           </Switch>
-        <Jumbotron />
+        
         <Footer />
       </Router>
     );

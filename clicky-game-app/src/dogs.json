@@ -1,0 +1,68 @@
+[
+    {
+      "id": 1,
+      "name": "dog1",
+      "image": "/assets/images/baptist-standaert-346832-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 2,
+      "name": "dog2",
+      "image": "/assets/images/charles-550068-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 3,
+      "name": "dog3",
+      "image": "/assets/images/christopher-ayme-157131-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 4,
+      "name": "dog4",
+      "image": "/assets/images/jamie-street-804226-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 5,
+      "name": "dog5",
+      "image": "/assets/images/lorca-wiles-667116-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 6,
+      "name": "dog6",
+      "image": "/assets/images/marko-blazevic-447504-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 7,
+      "name": "dog7",
+      "image": "/assets/images/nathalie-ehrnleitner-1524022-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 8,
+      "name": "dog8",
+      "image": "/assets/images/ryan-walton-367436-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 9,
+      "name": "dog9",
+      "image": "/assets/images/sven-kucinic-1392505-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 10,
+      "name": "dog10",
+      "image": "/assets/images/valentin-hermann-1276357-unsplash.jpg",
+      "clicked": false
+    },
+    {
+      "id": 11,
+      "name": "dog11",
+      "image": "/assets/images/vitor-fontes-563168-unsplash.jpg",
+      "clicked": false
+    }
+  ]

@@ -3,24 +3,41 @@
 // =============================================
 
 import React, { Component } from "react";
-import { Col, Row, Container } from "../components/Grid";
+import dogs from "../dogs.json";
+import { Row, Container } from "../components/Grid";
+import ImageCard from "../components/ImageCard";
 
 class Dogs extends Component {
     // Class components should always call the base constructor with props (https://reactjs.org/docs/state-and-lifecycle.html)
     // The 'super' keyword is used to access and call functions on an object's parent
     // Have to bind to make sure functions have access to component attributes
-    // constructor(props) {
-    //     super(props);
-    //     this.scoreCheck = this.scoreCheck.bind(this);
-    //     this.shuffleImages = this.shuffleImages.bind(this);
-    // }
+    constructor(props) {
+        super(props);
+        // this.scoreCheck = this.scoreCheck.bind(this);
+        // this.shuffleImages = this.shuffleImages.bind(this);
+        // Assign the initial this.state
+        this.state = {
+            dogs,
+            clickedImages: [],
+            score: 0,
+            highScore: 0
+        }
+    }
 
     render() {
         return (
-            <Container fluid>
+            <Container>
                 <Row>
-                    <Col size="col-md-12">
-                    </Col>
+                    <div class="col">
+                        {this.state.dogs.map(dogs => (
+                            <ImageCard 
+                                key={dogs.id}
+                                id={dogs.id}
+                                image={dogs.image}
+                                // scoreCheck={this.scoreCheck}
+                            />
+                        ))}
+                    </div>
                 </Row>
             </Container>
         );
