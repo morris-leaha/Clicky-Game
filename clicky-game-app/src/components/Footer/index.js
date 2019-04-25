@@ -4,7 +4,7 @@ import { Container } from "../Grid";
 
 function Footer() {
     return (
-        <footer className="footer sticky-bottom text-center">
+        <footer className="footer sticky-bottom text-center mt-5">
             <Container>
                 <small>Copyright &copy; 2019 Leah Morris</small>
             </Container>
