@@ -3,6 +3,9 @@
 // =============================================
 
 import React, { Component } from "react";
+import Navbar from "../components/Navbar";
+import Jumbotron from "../components/Jumbotron";
+import shuffle from "shuffle-array";
 import dogs from "../dogs.json";
 import { Container } from "../components/Grid";
 import ImageCard from "../components/ImageCard";
@@ -11,33 +14,78 @@ class Dogs extends Component {
     // Class components should always call the base constructor with props (https://reactjs.org/docs/state-and-lifecycle.html)
     // The 'super' keyword is used to access and call functions on an object's parent
     // Have to bind to make sure functions have access to component attributes
-    constructor(props) {
-        super(props);
-        // this.scoreCheck = this.scoreCheck.bind(this);
-        // this.shuffleImages = this.shuffleImages.bind(this);
+    // constructor(props) {
+    //     super(props);
+    //     this.scoreCheck = this.scoreCheck.bind(this);
+
         // Assign the initial this.state
-        this.state = {
+        state = {
             dogs,
-            clickedImages: [],
             score: 0,
             highScore: 0
         }
+    
+
+    handleClick = id => {
+        let correctGuess = false;
+        const newDogs = this.state.dogs.map(dog => {
+            const newDog = { ...dog };
+            if (newDog.id === id) {
+                if (!newDog.clicked) {
+                    newDog.clicked = true;
+                    correctGuess = true;
+                }
+            }
+            return newDog;
+        });
+        console.log(newDogs);
+        if (correctGuess) {
+            this.setState({ dogs: newDogs });
+            this.handleCorrectGuess();
+        } else {
+            this.handleIncorrectGuess();
+        }
+    }
+
+    handleIncorrectGuess = () => {
+        this.setState({
+            score: 0,
+            dogs: shuffle([...this.state.dogs])
+        })
+    }
+
+    handleCorrectGuess = () => {
+        let { score, highScore } = this.state;
+        const newScore = score + 1;
+        const newHighScore = Math.max(highScore, newScore);
+        this.setState({
+            score: newScore,
+            highScore: newHighScore,
+            dogs: shuffle([...this.state.dogs])
+        });
     }
 
     render() {
         return (
-            <Container>
-                <div className="row justify-content-around">
-                    {this.state.dogs.map(dogs => (
-                        <ImageCard
-                            key={dogs.id}
-                            id={dogs.id}
-                            image={dogs.image}
-                        // scoreCheck={this.scoreCheck}
-                        />
-                    ))}
-                </div>
-            </Container>
+            <div>
+                <Navbar
+                    score={this.state.score}
+                    highScore={this.state.highScore}
+                />
+                <Jumbotron />
+                <Container>
+                    <div className="row justify-content-around">
+                        {this.state.dogs.map(dog => (
+                            <ImageCard
+                                key={dog.id}
+                                id={dog.id}
+                                image={dog.image}
+                                handleClick={this.handleClick}
+                            />
+                        ))}
+                    </div>
+                </Container>
+            </div>
         );
     }
 }
