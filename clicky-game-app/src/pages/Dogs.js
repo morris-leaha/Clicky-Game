@@ -11,20 +11,14 @@ import { Container } from "../components/Grid";
 import ImageCard from "../components/ImageCard";
 
 class Dogs extends Component {
-    // Class components should always call the base constructor with props (https://reactjs.org/docs/state-and-lifecycle.html)
-    // The 'super' keyword is used to access and call functions on an object's parent
-    // Have to bind to make sure functions have access to component attributes
-    // constructor(props) {
-    //     super(props);
-    //     this.scoreCheck = this.scoreCheck.bind(this);
 
-        // Assign the initial this.state
-        state = {
-            dogs,
-            score: 0,
-            highScore: 0
-        }
-    
+    // Assign the initial this.state
+    state = {
+        dogs,
+        score: 0,
+        highScore: 0
+    }
+
 
     handleClick = id => {
         let correctGuess = false;
