@@ -4,7 +4,7 @@
 
 import React, { Component } from "react";
 import dogs from "../dogs.json";
-import { Row, Container } from "../components/Grid";
+import { Container } from "../components/Grid";
 import ImageCard from "../components/ImageCard";
 
 class Dogs extends Component {
@@ -27,18 +27,16 @@ class Dogs extends Component {
     render() {
         return (
             <Container>
-                <Row>
-                    <div class="col">
-                        {this.state.dogs.map(dogs => (
-                            <ImageCard 
-                                key={dogs.id}
-                                id={dogs.id}
-                                image={dogs.image}
-                                // scoreCheck={this.scoreCheck}
-                            />
-                        ))}
-                    </div>
-                </Row>
+                <div className="row justify-content-around">
+                    {this.state.dogs.map(dogs => (
+                        <ImageCard
+                            key={dogs.id}
+                            id={dogs.id}
+                            image={dogs.image}
+                        // scoreCheck={this.scoreCheck}
+                        />
+                    ))}
+                </div>
             </Container>
         );
     }
