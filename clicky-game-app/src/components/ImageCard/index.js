@@ -11,7 +11,7 @@ function ImageCard(props) {
                     id={props.id}
                     className="dog-imageCard card-img img-fluid"
                     alt={props.name}
-                    onClick={() => props.handleClick(props.id)}
+                    onClick={() => props.handleClick(props.id, props.clicked)}
                 />
             </div>
         </Col>
