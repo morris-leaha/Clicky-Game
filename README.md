@@ -2,7 +2,7 @@
 Clicky-Game is a "memory game" web-based application using React.js
 
 ## Deployment
-This app is deployed using Heroku.  Click <a href="https://clicky-app-reactapp.herokuapp.com/">here</a> to start interacting.
+This app is deployed using Heroku.  Click <a href="https://clicky-game-leah.herokuapp.com/">here</a> to start interacting.
 
 ## Screenshot
 ![HomePage](clicky-game-app/public/assets/images/homepage.png)
