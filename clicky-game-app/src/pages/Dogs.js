@@ -20,8 +20,11 @@ class Dogs extends Component {
     }
 
 
-    handleClick = id => {
-        let correctGuess = false;
+    handleClick = (id, clicked) => {
+        // let correctGuess = false;
+        if (!clicked) {
+            this.handleCorrectGuess();
+        }
         const newDogs = this.state.dogs.map(dog => {
             const newDog = { ...dog };
             if (newDog.id === id) {
